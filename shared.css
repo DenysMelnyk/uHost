@@ -1,17 +1,30 @@
 * {
   box-sizing: border-box;
 }
+body::-webkit-scrollbar {
+  width: 0
+}
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
-  height: 100%;
+}
+.backdrop {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+
 }
 .main-header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   background: #2ddf5c;
   z-index: 1;
 }
@@ -24,7 +37,7 @@ body {
   color: #0e4f1f;
   text-decoration: none;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 1.37rem;
   height: 22px;
 }
 .main-header__brand img{
@@ -43,13 +56,13 @@ body {
 }
 .main-nav__item {
   display: inline-block;
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 .main-nav__item a {
   color: #0e4f1f;
   text-decoration: none;
   font-weight: bold;
-  padding: 3px 0;
+  padding: 0.2rem 0;
 }
 .main-nav__item a:hover,
 .main-nav__item a:active {
@@ -59,7 +72,7 @@ body {
 .main-nav__item--cta a {
   color: #ffffff;
   background: #ff1b68;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   border-radius: 8px;
 }
 .main-nav__item--cta a:hover,
@@ -70,8 +83,8 @@ body {
 }
 .main-footer {
   background: #000000;
-  padding: 32px;
-  margin-top: 48px;
+  padding: 2rem;
+  margin-top: 3rem;
 }
 .main-footer__links {
   list-style: none;
@@ -81,7 +94,7 @@ body {
 }
 .main-footer__link {
   display: inline-block;
-  margin: 0 16px;
+  margin: 0 1rem;
 }
 .main-footer__link a {
   text-decoration: none;
@@ -96,7 +109,7 @@ body {
   color: #ffffff;
   font: inherit;
   border: 1.5px solid #0e4f1f;
-  padding: 8px;
+  padding: 0.5rem;
   border-radius: 8px;
   font-weight: bold;
 }
