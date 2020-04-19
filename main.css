@@ -1,12 +1,10 @@
 #product-overview {
   background: linear-gradient(to top, rgba(80, 68, 18, 0.6) 10%, transparent),
-    url("images/freedom.jpg") left 10% bottom 70% / cover no-repeat border-box,
-    #ff1b68;
+    url("images/freedom.jpg") center / cover no-repeat border-box, #ff1b68;
   width: 100vw;
   height: 33vh;
   padding: 0.6rem;
   position: relative;
-  margin-top: 2.7rem;
 }
 #product-overview h2 {
   color: #ffffff;
@@ -14,29 +12,22 @@
   position: absolute;
   bottom: 5%;
   left: 3%;
+  font-size: 1.6rem;
 }
 .section-title {
   color: #2ddf5c;
-  text-align: center;
-}
-.plan__list {
-  width: 80%;
-  margin: 0 auto;
   text-align: center;
 }
 .plan {
   background: #d5ffdc;
   text-align: center;
   padding: 1rem;
-  margin: 0.5rem;
-  display: inline-block;
-  width: 30%;
-  vertical-align: middle;
+  margin: 0.5rem 0;
+  width: 100%;
 }
 .plan--highlighted {
   background: #19b84c;
   color: #ffffff;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 .plan__annotation {
   padding: 0.5rem;
@@ -78,12 +69,10 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  text-align: center;
 }
 .key-feature {
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
+  display: block;
+  width: 100%;
 }
 .key-feature__image {
   background: #ffcede;
@@ -137,10 +126,53 @@
 }
 .modal__action--negative {
   background: #ff0000;
-  border-color: #ff0000
+  border-color: #ff0000;
 }
 .modal__action--negative:hover,
 .modal__action--negative:active {
   background: #ff5454;
   border-color: #ff5454;
+}
+
+/* MEDIA QUERY */
+@media (min-width: 40rem) {
+  #product-overview {
+    height: 40vh;
+    background-position: 50% 25%;
+  }
+  #product-overview h2 {
+    font-size: 3rem;
+  }
+  .plan__list {
+    width: 100%;
+    text-align: center;
+  }
+  .plan {
+    display: inline-block;
+    width: 30%;
+    min-width: 13rem;
+    max-width: 25rem;
+    vertical-align: middle;
+  }
+  .plan--highlighted {
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+  .plan__annotation {
+    font-size: 1.2rem;
+  }
+  .key-feature__list {
+    text-align: center;
+  }
+  .key-feature {
+    display: inline-block;
+    width: 30%;
+    max-width: 25rem;
+    vertical-align: top;
+  }
+}
+@media (min-width: 40rem) and (min-height: 40rem) {
+  #product-overview {
+    height: 40vh;
+    background-position: 50% 25%;
+  }
 }
