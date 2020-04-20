@@ -43,9 +43,9 @@ main {
 .package__info {
   border: 1px solid #0e4f1f;
   padding: 1rem;
-  font-size: 1.25rem;
   color: #0e4f1f;
   background: #ffffff;
+  font-size: 1.2rem;
 }
 .clearfix {
   clear: both;
