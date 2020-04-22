@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,400,900");
 @import url("https://fonts.googleapis.com/css?family=Anton");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+:root {
+  --dark-green: #0e4f1f;
+  --highlight-color: #ff1b68;
+}
 * {
   box-sizing: border-box;
 }
@@ -13,13 +17,19 @@ body::-webkit-scrollbar {
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
-  display: grid;
-  grid-template-rows: 3.5rem auto fit-content(8rem);
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  height: 100%;
+  padding-top: 3.5rem;
+}
+@supports(display: grid){
+  body {
+    display: grid;
+    grid-template-rows: 3.5rem auto fit-content(8rem);
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    height: 100%;
+    padding-top: 0;
+  }
 }
 main {
   /* grid-row: 2 / 3; */
@@ -37,6 +47,9 @@ main {
 }
 .main-header {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -67,7 +80,7 @@ main {
   margin: 0.6rem 0;
 }
 .main-header__brand {
-  color: #0e4f1f;
+  color: var(--dark-green, #0e4f1f);
   text-decoration: none;
   font-weight: bold;
 }
@@ -89,7 +102,7 @@ main {
 }
 .main-nav__item a,
 .mobile-nav__item a {
-  color: #0e4f1f;
+  color: var(--dark-green, #0e4f1f);
   text-decoration: none;
   font-weight: bold;
   padding: 0.2rem 0;
@@ -105,7 +118,7 @@ main {
 .main-nav__item--cta a,
 .mobile-nav__item--cta a {
   color: #ffffff;
-  background: #ff1b68;
+  background: var(--highlight-color, #ff1b68);
   padding: 0.5rem 1rem;
   border-radius: 8px;
 }
@@ -114,7 +127,7 @@ main {
 .mobile-nav__item--cta a:hover,
 .mobile-nav__item--cta a:active {
   border: none;
-  color: #ff1b68;
+  color: var(--highlight-color, #ff1b68);
   background: #ffffff;
 }
 .main-footer {
@@ -146,10 +159,10 @@ main {
   color: #cccccc;
 }
 .button {
-  background: #0e4f1f;
+  background: var(--dark-green, #0e4f1f);
   color: #ffffff;
   font: inherit;
-  border: 1.5px solid #0e4f1f;
+  border: 1.5px solid var(--dark-green, #0e4f1f);
   padding: 0.5rem;
   border-radius: 8px;
   font-weight: bold;
@@ -158,7 +171,7 @@ main {
 .button:active {
   cursor: pointer;
   background: #ffffff;
-  color: #0e4f1f;
+  color: var(--dark-green, #0e4f1f);
 }
 .button:focus {
   outline: none;
